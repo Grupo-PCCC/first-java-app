@@ -5,6 +5,9 @@
  */
 package grupopccc.first.java.app;
 
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 /**
  *
  * @author gabriel
@@ -35,6 +38,7 @@ public class frmNombreApellido extends javax.swing.JDialog {
         btnGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Datos Personales 1");
 
         lblApellido.setText("Apellido");
 
@@ -85,12 +89,14 @@ public class frmNombreApellido extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
         String nombre = txtNombre.getText();
         String apellido = txtApellido.getText();
+        showMessageDialog(null, "Datos agregados exitosamente","Datos Personales 1",INFORMATION_MESSAGE);
         frmPrincipal.txtNombre.setText(nombre);
         frmPrincipal.txtApellido.setText(apellido);
         this.dispose();
